@@ -16,7 +16,7 @@ export default function AddTopic(){
             return
         }
         try {
-            const res =await fetch('http://localhost:3000/api/topics',{
+            const res =await fetch('${process.env.API_BASE_URL}/api/topics',{
                 method:"POST",
                 headers:{
                     "Content-type":"application/json"

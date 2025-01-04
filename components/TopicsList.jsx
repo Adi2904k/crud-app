@@ -3,7 +3,7 @@ import {HiPencilAlt} from 'react-icons/hi';
 import Link from "next/link";
 const getTopics =async()=>{
     try{
-        const res = await fetch('http://localhost:3000/api/topics', {
+        const res = await fetch('${process.env.API_BASE_URL}/api/topics', {
             cache:"no-store",
     });
     if(!res.ok){
